@@ -1,0 +1,2 @@
+alert icmp any any -> $RASPBERRY_IP any (msg: "ICMP Packet found hacia raspberrypI";)
+alert tcp any any -> $RASPBERRY_IP 22 (msg: "SSH conexión detectada"; flow:to_server; app-layer-protocol:ssh; sid:2271009; rev:1;)
